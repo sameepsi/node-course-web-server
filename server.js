@@ -45,6 +45,15 @@ hbs.registerHelper('screamIt',(text)=>{
     welcomeMessage : 'I welcome you to this page'
   })
  });
+
+ app.get('/projects',(req, res)=>{
+  //  res.send('<h1>Hello Express!</h1>');
+  res.render('project.hbs',{
+    pageTitle:'Projects Page',
+    welcomeMessage : 'This page contains information about my projects'
+  })
+ });
+
 app.get('/about',(req,res)=>{
 res.render('about.hbs',{
   pageTitle:'About Page'
